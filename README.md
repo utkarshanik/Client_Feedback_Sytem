@@ -1,10 +1,27 @@
 # Client Feedback Management Portal
-
 ## Overview
 The **Client Feedback Management Portal** is a web-based system designed to streamline and manage feedback from clients efficiently. The system enables clients to provide feedback on IT services, while administrators can review and analyze this feedback to enhance service quality.
 
+## Screenshots
+### Login Page
+![Login Page](Screenshots/login.png)
+![Siginin Page](Screenshots/Signup.png)
+![AdminLogin Page](Screenshots/Admn_Login.png)
+![Invalid Login Page](Screenshots/invalid.png)
+
+### Client Dashboard
+![Client Dashboard](Screenshots/landingpage.png)
+![Feedback Form](Screenshots/FeebackResponse.png)
+![Form](Screenshots/SuccessForm.png)
+![Form](Screenshots/EmptyResponse.png)
+
+
+### Admin Panel
+![Admin Panel](Screenshots/DASHBOARD.png)
+![Admin Panel](Screenshots/AdminDashboard.png)
+
 ## Features
-- **Unified Login System**: A single authentication system for both admins and users.
+- **Unified Login System**: A single authentication system for both admins and users.   
 - **Client Feedback Submission**: Clients can submit feedback on services received.
 - **Admin Panel**: Admins can review, analyze, and respond to feedback.
 - **Secure Authentication**: Uses JWT (JSON Web Tokens) for secure login.
@@ -78,23 +95,6 @@ Client-Feedback-Management/
   | GET    | `/api/details`        | Retrieve all feedback (admin) |
   | POST   | `/api/submitForm`     | Submit feedback (client)      |
 
-## Screenshots
-### Login Page
-![Login Page](Screenshots/login.png)
-![Siginin Page](Screenshots/Signup.png)
-![AdminLogin Page](Screenshots/Admn_Login.png)
-![Invalid Login Page](Screenshots/invalid.png)
-
-### Client Dashboard
-![Client Dashboard](Screenshots/landingpage.png)
-![Feedback Form](Screenshots/FeebackResponse.png)
-![Form](Screenshots/SuccessForm.png)
-![Form](Screenshots/EmptyResponse.png)
-
-
-### Admin Panel
-![Admin Panel](Screenshots/DASHBOARD.png)
-![Admin Panel](Screenshots/AdminDashboard.png)
 
 ## Contribution
 Contributions are welcome! Feel free to open an issue or submit a pull request.
