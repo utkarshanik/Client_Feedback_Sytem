@@ -1,7 +1,25 @@
-# Client Feedback Management Portal
+##### Overview
+The **Client Feedback Management Portal** is a web-based system designed to streamline and manage feedback from clients efficiently. The system enables clients to provide feedback on IT, while administrators review and analyze this feedback to enhance service 
+**Unified Login System**: A single authentication system for both admins and users[Admin id=> utkarshanikam9@gmail.com, pass 12345].
+## Screenshots
+### Login Page
+![Login Page](Screenshots/login.png)
+![Siginin Page](Screenshots/Signup.png)
+[Admin id=> utkarshanikam9@gmail.com, pass 12345]
+![AdminLogin Page](Screenshots/Admn_Login.png)
+![Invalid Login Page](Screenshots/invalid.png)
 
-## Overview
-The **Client Feedback Management Portal** is a web-based system designed to streamline and manage feedback from clients efficiently. The system enables clients to provide feedback on IT services, while administrators can review and analyze this feedback to enhance service quality.
+### Client Dashboard
+![Client Dashboard](Screenshots/landingpage.png)
+![Feedback Form](Screenshots/FeebackResponse.png)
+![Form](Screenshots/SuccessForm.png)
+![Form](Screenshots/EmptyResponse.png)
+
+
+### Admin Panel
+![Admin Panel](Screenshots/DASHBOARD.png)
+![Admin Panel](Screenshots/AdminDashboard.png)
+![Admin Panel](Screenshots/AllReviews.png)
 
 ## Features
 - **Unified Login System**: A single authentication system for both admins and users.
@@ -78,23 +96,6 @@ Client-Feedback-Management/
   | GET    | `/api/details`        | Retrieve all feedback (admin) |
   | POST   | `/api/submitForm`     | Submit feedback (client)      |
 
-## Screenshots
-### Login Page
-![Login Page](Screenshots/login.png)
-![Siginin Page](Screenshots/Signup.png)
-![AdminLogin Page](Screenshots/Admn_Login.png)
-![Invalid Login Page](Screenshots/invalid.png)
-
-### Client Dashboard
-![Client Dashboard](Screenshots/landingpage.png)
-![Feedback Form](Screenshots/FeebackResponse.png)
-![Form](Screenshots/SuccessForm.png)
-![Form](Screenshots/EmptyResponse.png)
-
-
-### Admin Panel
-![Admin Panel](Screenshots/DASHBOARD.png)
-![Admin Panel](Screenshots/AdminDashboard.png)
 
 ## Contribution
 Contributions are welcome! Feel free to open an issue or submit a pull request.
