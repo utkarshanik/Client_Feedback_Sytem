@@ -3,7 +3,8 @@ import '../css/sign.css'
 import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
-// import styles from './sign.module.css';
+
+const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 export default function Sign() {
 	const [name, setName] = useState('');
@@ -12,17 +13,24 @@ export default function Sign() {
 	const [message, setMessage] = useState('');
 	// const [message2, setMessage2] = useState('');
 	const navigate = useNavigate()
-  
+	
 	const handleSignin = async (e) => {
 	  e.preventDefault();
   
 	  try {
-		// Make a POST request to the Express backend
-		const response = await axios.post('http://localhost:5000/api/auth/createUser', {
+		// Make a POST req to Render just gave path in $api_URL
+		const response = await axios.post(`${API_URL}/api/auth/createUser`, {
 		  name,
 		  email,
 		  password,
 		});
+
+		// Original one with localhost:5000  
+		// const response = await axios.post('http://localhost:5000/api/auth/createUser', {
+		//   name,
+		//   email,
+		//   password,
+		// });
 		
 		// Handle success
 		setMessage(response.data.message);
@@ -50,10 +58,17 @@ export default function Sign() {
 const handleLogin=async(e)=>{
 	e.preventDefault();
 	try {
-		const response=await axios.post('http://localhost:5000/api/auth/loginUser',{
+
+
+		const response=await axios.post(`${API_URL}/api/auth/loginUser`,{
 			email,
 			password,
 		})
+
+		// const response=await axios.post('http://localhost:5000/api/auth/loginUser',{
+		// 	email,
+		// 	password,
+		// })
 		
 		// Destructring into (token & message)
 		const{token,message}= response.data;

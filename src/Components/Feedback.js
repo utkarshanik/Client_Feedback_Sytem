@@ -4,6 +4,7 @@ import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
+const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 
 export default function Feedback() {
@@ -64,7 +65,8 @@ export default function Feedback() {
       console.log(token);
   
       console.log(token);
-      const response = await axios.post('http://localhost:5000/api/review/submitForm',{
+
+      const response = await axios.post(`${API_URL}/api/review/submitForm`,{
         overall:over,
         Service_Type:service,
         quality:quality,
@@ -79,6 +81,21 @@ export default function Feedback() {
         "Auth-token": token,
       },
     });
+    //   const response = await axios.post('http://localhost:5000/api/review/submitForm',{
+    //     overall:over,
+    //     Service_Type:service,
+    //     quality:quality,
+    //     timeline: time,
+    //     money: mon,
+    //     support: sup,
+    //     msg:msg
+    //   },
+    // {
+    //   headers:
+    //   {
+    //     "Auth-token": token,
+    //   },
+    // });
     toast.success("Thank you for your feedback!", {
       onClose: () => navigate('/mainpage'),
       position: "top-center",

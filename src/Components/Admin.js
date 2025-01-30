@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css/admin.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+const API_URL = process.env.REACT_APP_BACKEND_URL;
 
 export default function Admin() {
   
@@ -29,7 +30,7 @@ export default function Admin() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get( "http://localhost:5000/api/dashboard/details");
+        const response = await axios.get( `${API_URL}/api/dashboard/details`);
 console.log(response.data);
         const { count, averages, overDistribution,overQuality,overTimeline,overMoney,overSupport} = response.data;
 
